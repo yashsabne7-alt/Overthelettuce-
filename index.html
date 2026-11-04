@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fresh food, better choices. Explore the Over the Lettuce menu and order directly on WhatsApp.">
+  <meta name="theme-color" content="#173d2b">
+  <title>Over the Lettuce | Fresh Food. Better Choices.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Over the Lettuce home">
+      <img src="assets/logo.svg" alt="" class="brand-mark">
+      <span>OVER THE <b>LETTUCE</b></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav" id="mainNav">
+      <a href="#home">Home</a><a href="#about">Our Story</a>
+      <a href="#veg-menu">Veg Menu</a><a href="#nonveg-menu">Non-Veg Menu</a>
+      <a href="#contact">Contact</a>
+      <button class="cart-nav" id="openCart">Cart <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">FRESH • SIMPLE • DELICIOUS</p>
+        <h1>Fresh Food.<br><em>Better Choices.</em></h1>
+        <p class="hero-text">Discover fresh, delicious food made to bring more goodness to your everyday.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#veg-menu">Explore Our Menu</a>
+          <button class="btn btn-light" id="heroOrder">Order on WhatsApp</button>
+        </div>
+        <p class="hero-note">Made fresh. Made with care.</p>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Fresh colourful salad bowl"></div>
+      <div class="hero-stamp"><span>GOOD FOOD</span><b>GOOD MOOD</b></div>
+    </section>
+
+    <section class="intro section-wrap" id="about">
+      <p class="eyebrow">WELCOME TO OVER THE LETTUCE</p>
+      <h2>A little more freshness<br>in every bite.</h2>
+      <p>Thoughtful ingredients, vibrant flavours and feel-good food. Find something fresh to love, whether you're in the mood for a wholesome bowl, a sandwich or a refreshing drink.</p>
+    </section>
+
+    <section class="menu-section section-wrap" id="veg-menu">
+      <div class="section-heading">
+        <div><p class="eyebrow">FRESH FROM THE KITCHEN</p><h2>Vegetarian Menu</h2></div>
+        <span class="diet-label veg-label">● VEG</span>
+      </div>
+      <div class="category-row" id="vegCategories"></div>
+      <div class="menu-grid" id="vegItems"></div>
+    </section>
+
+    <section class="menu-section menu-section-alt section-wrap" id="nonveg-menu">
+      <div class="section-heading">
+        <div><p class="eyebrow">FRESH FROM THE KITCHEN</p><h2>Non-Vegetarian Menu</h2></div>
+        <span class="diet-label nonveg-label">● NON-VEG</span>
+      </div>
+      <div class="category-row" id="nonvegCategories"></div>
+      <div class="menu-grid" id="nonvegItems"></div>
+    </section>
+
+    <section class="order-banner section-wrap">
+      <div><p class="eyebrow">YOUR NEXT FAVOURITE IS A CLICK AWAY</p><h2>Good food is calling.</h2><p>Choose your favourites and send your order directly to our team on WhatsApp.</p></div>
+      <button class="btn btn-cream" id="bannerOrder">Start Your Order</button>
+    </section>
+
+    <section class="contact-section section-wrap" id="contact">
+      <div class="contact-heading"><p class="eyebrow">COME SAY HELLO</p><h2>Find us. Follow us.<br><em>Eat well.</em></h2></div>
+      <div class="contact-grid">
+        <div><span class="contact-icon">⌖</span><h3>Visit Us</h3><p>Shop 12, Ground Floor, Building 17A, Ward H/E, Bandra Kurla Complex, near Air India Road / Modern School, Santacruz East, Kalina, Mumbai, Maharashtra – 400098.</p><a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Shop%2012%20Ground%20Floor%20Building%2017A%20Bandra%20Kurla%20Complex%20Santacruz%20East%20Kalina%20Mumbai">Get directions ↗</a></div>
+        <div><span class="contact-icon">◷</span><h3>Opening Hours</h3><p>Monday – Sunday<br>11:00 AM – 11:00 PM</p><small>WhatsApp orders can be sent anytime. The restaurant team will respond when available.</small></div>
+        <div><span class="contact-icon">✉</span><h3>Get in Touch</h3><p><a href="mailto:overthelettuce@gmail.com">overthelettuce@gmail.com</a><br><a href="https://wa.me/918369405815" target="_blank" rel="noopener">+91 83694 05815</a></p><p><a href="https://www.instagram.com/over.thelettuce/" target="_blank" rel="noopener">Instagram @over.thelettuce ↗</a><br><a href="https://www.facebook.com/share/1KHue73ZgQ/" target="_blank" rel="noopener">Facebook ↗</a></p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><a class="brand footer-brand" href="#home"><img src="assets/logo.svg" alt=""><span>OVER THE <b>LETTUCE</b></span></a><p>Fresh Food. Better Choices.</p><small>© <span id="year"></span> Over the Lettuce. All rights reserved.</small></footer>
+
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Your cart" aria-hidden="true">
+    <div class="cart-head"><div><p class="eyebrow">YOUR SELECTION</p><h2>Your Cart</h2></div><button id="closeCart" class="close-btn" aria-label="Close cart">×</button></div>
+    <div id="cartItems" class="cart-items"><p class="empty-cart">Your cart is waiting for something fresh.</p></div>
+    <div class="cart-summary">
+      <label class="field-label" for="customerName">Your name</label><input id="customerName" type="text" placeholder="Enter your name">
+      <label class="field-label" for="customerPhone">Contact number</label><input id="customerPhone" type="tel" placeholder="Enter your contact number">
+      <label class="field-label" for="specialNotes">Special instructions</label><textarea id="specialNotes" rows="3" placeholder="Any preferences? (Optional)"></textarea>
+      <div class="total-row"><span>Subtotal</span><strong id="cartTotal">₹0</strong></div>
+      <p class="charge-note">Any applicable additional charges will be confirmed by the restaurant.</p>
+      <button class="btn btn-primary checkout-btn" id="checkoutBtn">Order on WhatsApp</button>
+      <small class="privacy-note">Your order will be sent directly to the restaurant. Payment and fulfilment are handled by the restaurant.</small>
+    </div>
+  </aside>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+        </html>
